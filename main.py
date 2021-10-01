@@ -32,9 +32,16 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-
-
     screen.fill(BLUE)
+
+
+    # functions
+    def trees(place, color, x1, y1, mult):
+        space = 180 * mult
+        tree = pygame.draw.polygon(place, color, ((x1 + space, y1), (x1 - 50 + space, y1 + 150), (x1 - 25 + space, y1 + 130), (x1 - 60 + space, y1 + 250),
+        (x1 - 35 + space, y1 + 230), (x1 - 100 + space, 700), (x1 + 100 + space, 700), (x1 + 25 + space, y1 + 230),
+        (x1 + 50 + space, y1 + 250), (x1 + 15 + space, y1 + 130), (x1 + 40 + space, y1 + 150)))
+
 
     # drawing
     # stars
@@ -47,12 +54,8 @@ while running:
 
     # trees
     for multiplier in range (4):
-        pygame.draw.polygon(screen, GREEN, ((100 + 180*multiplier, 100), (50 + 180*multiplier, 250), (75 + 180*multiplier, 230), (40 + 180*multiplier, 350), (65 + 180*multiplier, 330), (0 + 180*multiplier, 700), (200 + 180*multiplier, 700), (125 + 180*multiplier, 330), (150 + 180*multiplier, 350), (115 + 180*multiplier, 230), (140 + 180*multiplier, 250)))
-
-        pygame.draw.polygon(screen, GREEN2, ((20 + 180 * multiplier, 100), (-40 + 180 * multiplier, 250), (-15 + 180 * multiplier, 230), (-50 + 180 * multiplier, 350), (-25 + 180 * multiplier, 330), (-80 + 180 * multiplier, 700), (120 + 180 * multiplier, 700), (35 + 180 * multiplier, 330), (60 + 180 * multiplier, 350), (25 + 180 * multiplier, 230), (50 + 180 * multiplier, 250)))
-
-
-
+        trees(screen, GREEN, 100, 100, multiplier)
+        trees(screen, GREEN2, 20, 100, multiplier)
 
     pygame.display.flip()
 
