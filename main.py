@@ -8,7 +8,7 @@ BLUE = (7, 71, 92)
 GREEN = (6, 69, 22)
 GREEN2 = (22, 87, 0)
 WHITE = (255, 255, 255)
-YELLOW = (255, 221, 71)
+YELLOW = (255, 220, 71)
 STARS = [WHITE, YELLOW]
 
 # math constants
